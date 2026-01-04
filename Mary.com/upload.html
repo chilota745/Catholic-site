@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Upload - Aguleri Diocesan Marine Shrine</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1258e2",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        body {
+            min-height: max(884px, 100dvh);
+        }
+
+        .font-variation-settings-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased overflow-x-hidden">
+    <div class="relative flex h-full min-h-screen w-full flex-col group/design-root">
+        <!-- Top App Bar -->
+        <header
+            class="sticky top-0 z-50 flex items-center bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm p-4 border-b border-gray-200 dark:border-gray-800">
+            <button
+                class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full active:bg-gray-200 dark:active:bg-gray-800 transition-colors">
+                <span class="material-symbols-outlined text-[24px]">menu</span>
+            </button>
+            <h1
+                class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10 truncate">
+                Upload Media
+            </h1>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 flex flex-col p-4 pb-24 gap-6">
+            <div class="text-center">
+                <h2 class="text-2xl font-bold mb-2">Share Your Memories</h2>
+                <p class="text-slate-500 dark:text-gray-400 text-sm">Upload photos or videos from your visit to the
+                    shrine.</p>
+            </div>
+
+            <form class="flex flex-col gap-4">
+                <div class="flex items-center justify-center w-full">
+                    <label for="dropzone-file"
+                        class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                        <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                            <span class="material-symbols-outlined text-[48px] text-gray-400 mb-3">cloud_upload</span>
+                            <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click
+                                    to upload</span> or drag and drop</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)
+                            </p>
+                        </div>
+                        <input id="dropzone-file" type="file" class="hidden" />
+                    </label>
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <label class="text-sm font-medium">Description</label>
+                    <textarea
+                        class="w-full rounded-lg bg-white dark:bg-[#1C2433] border border-gray-200 dark:border-gray-700 p-3 text-sm focus:ring-primary focus:border-primary"
+                        rows="4" placeholder="Tell us about this moment..."></textarea>
+                </div>
+
+                <button type="button"
+                    class="mt-2 w-full bg-primary text-white font-bold py-3 px-4 rounded-full shadow-lg shadow-blue-900/20 active:scale-95 transition-transform">
+                    Upload
+                </button>
+            </form>
+        </main>
+
+        <!-- Bottom Navigation Bar -->
+        <nav
+            class="fixed bottom-0 w-full z-40 bg-white dark:bg-[#192233] border-t border-gray-200 dark:border-[#232f48] pb-safe">
+            <div class="flex justify-around items-center h-16 px-2">
+                <a class="flex flex-1 flex-col items-center justify-center gap-1 text-gray-400 dark:text-[#92a4c9] hover:text-primary dark:hover:text-primary transition-colors group"
+                    href="Aguleri.html">
+                    <span
+                        class="material-symbols-outlined text-[24px] group-hover:scale-110 transition-transform">home</span>
+                    <span class="text-[10px] font-medium tracking-wide">Home</span>
+                </a>
+                <a class="flex flex-1 flex-col items-center justify-center gap-1 text-gray-400 dark:text-[#92a4c9] hover:text-primary dark:hover:text-primary transition-colors group"
+                    href="weekly.html">
+                    <span
+                        class="material-symbols-outlined text-[24px] group-hover:scale-110 transition-transform">calendar_month</span>
+                    <span class="text-[10px] font-medium tracking-wide">Events</span>
+                </a>
+                <!-- Center Action Button -->
+                <a class="flex flex-col items-center justify-center -mt-6" href="upload.html">
+                    <div
+                        class="size-14 bg-primary rounded-full flex items-center justify-center shadow-lg shadow-primary/40 border-4 border-white dark:border-[#192233]">
+                        <span class="material-symbols-outlined text-white text-[28px]">cloud_upload</span>
+                    </div>
+                    <span class="text-[10px] font-medium text-primary mt-1">Upload</span>
+                </a>
+                <a class="flex flex-1 flex-col items-center justify-center gap-1 text-gray-400 dark:text-[#92a4c9] hover:text-primary dark:hover:text-primary transition-colors group"
+                    href="#">
+                    <span
+                        class="material-symbols-outlined text-[24px] group-hover:scale-110 transition-transform">shrine</span>
+                    <span class="text-[10px] font-medium tracking-wide">Prayers</span>
+                </a>
+                <a class="flex flex-1 flex-col items-center justify-center gap-1 text-gray-400 dark:text-[#92a4c9] hover:text-primary dark:hover:text-primary transition-colors group"
+                    href="#">
+                    <span
+                        class="material-symbols-outlined text-[24px] group-hover:scale-110 transition-transform">volunteer_activism</span>
+                    <span class="text-[10px] font-medium tracking-wide">Donate</span>
+                </a>
+            </div>
+            <!-- iOS Home Indicator Spacing -->
+            <div class="h-[env(safe-area-inset-bottom)] bg-white dark:bg-[#192233]"></div>
+        </nav>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
